@@ -1,12 +1,12 @@
 {
-    "name": "modular-middleware/modular-middleware-template",
+    "name": "modular-middleware/modular-middleware-lightspeed",
     "description": "A package for modular middleware",
     "keywords": [
-        "modular-template",
+        "modular-lightspeed",
         "laravel",
-        "modular-middleware-template"
+        "modular-middleware-lightspeed"
     ],
-    "homepage": "https://github.com/modular-template/modular-middleware-template",
+    "homepage": "https://github.com/modular-lightspeed/modular-middleware-lightspeed",
     "license": "MIT",
     "authors": [
         {
@@ -30,13 +30,13 @@
     },
     "autoload": {
         "psr-4": {
-            "ModularTemplate\\ModularTemplate\\": "src",
-            "ModularTemplate\\ModularTemplate\\Database\\Factories\\": "database/factories"
+            "ModularLightspeed\\ModularLightspeed\\": "src",
+            "ModularLightspeed\\ModularLightspeed\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ModularTemplate\\ModularTemplate\\Tests\\": "tests"
+            "ModularLightspeed\\ModularLightspeed\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -51,10 +51,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ModularTemplate\\ModularTemplate\\ModularTemplateServiceProvider"
+                "ModularLightspeed\\ModularLightspeed\\ModularLightspeedServiceProvider"
             ],
             "aliases": {
-                "ModularTemplate": "ModularTemplate\\ModularTemplate\\Facades\\ModularTemplate"
+                "ModularLightspeed": "ModularLightspeed\\Modularv\\Facades\\ModularLightspeed"
             }
         }
     },

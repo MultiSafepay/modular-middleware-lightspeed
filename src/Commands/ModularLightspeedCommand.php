@@ -1,12 +1,12 @@
 <?php
 
-namespace ModularTemplate\ModularTemplate\Commands;
+namespace ModularLightspeed\ModularLightspeed\Commands;
 
 use Illuminate\Console\Command;
 
-class ModularTemplateCommand extends Command
+class ModularLightspeedCommand extends Command
 {
-    public $signature = 'modular-middleware-template';
+    public $signature = 'modular-middleware-lightspeed';
 
     public $description = 'My command';
 
