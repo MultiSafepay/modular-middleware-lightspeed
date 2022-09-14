@@ -1,6 +1,6 @@
 <?php
 
-// config for ModularTemplate/ModularTemplate
+// config for ModularLightspeed/ModularLightspeed
 return [
 
 ];

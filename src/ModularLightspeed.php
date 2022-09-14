@@ -1,8 +1,8 @@
 <?php
 
-namespace Modularlightspeed\Modularlightspeed;
+namespace ModularLightspeed\ModularLightspeed;
 
-class Modularlightspeed
+class ModularLightspeed
 {
 
 }

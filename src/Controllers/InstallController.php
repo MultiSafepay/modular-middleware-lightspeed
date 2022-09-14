@@ -1,12 +1,12 @@
 <?php
-namespace Modularlightspeed\Modularlightspeed\Controllers;
+namespace ModularLightspeed\ModularLightspeed\Controllers;
 
 use Illuminate\Http\Request;
-use Modularlightspeed\Modularlightspeed\Clients\lightspeedClient;
-use Modularlightspeed\Modularlightspeed\Models\lightspeed;
-use Modularlightspeed\Modularlightspeed\API\Request\ExternalServices\PostExternalService;
-use Modularlightspeed\Modularlightspeed\API\Request\ShopScripts\PostShopScript;
-use Modularlightspeed\Modularlightspeed\API\Request\Webhooks\PostWebhook;
+use ModularLightspeed\ModularLightspeed\Clients\lightspeedClient;
+use ModularLightspeed\ModularLightspeed\Models\lightspeed;
+use ModularLightspeed\ModularLightspeed\API\Request\ExternalServices\PostExternalService;
+use ModularLightspeed\ModularLightspeed\API\Request\ShopScripts\PostShopScript;
+use ModularLightspeed\ModularLightspeed\API\Request\Webhooks\PostWebhook;
 
 class InstallController
 {

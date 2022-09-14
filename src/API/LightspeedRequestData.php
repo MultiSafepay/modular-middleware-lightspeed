@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 
-namespace Modularlightspeed\Modularlightspeed\API;
+namespace ModularLightspeed\ModularLightspeed\API;
 
 
 use App\Data\RequestData;

@@ -1,5 +1,5 @@
 <?php
-namespace Modularlightspeed\Modularlightspeed\Requests;
+namespace ModularLightspeed\ModularLightspeed\Requests;
 
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;

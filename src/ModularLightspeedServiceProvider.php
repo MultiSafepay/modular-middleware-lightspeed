@@ -1,12 +1,13 @@
 <?php
 
-namespace Modularlightspeed\Modularlightspeed;
+namespace ModularLightspeed\ModularLightspeed;
 
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Log;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class ModularlightspeedServiceProvider extends PackageServiceProvider
+class ModularLightspeedServiceProvider extends PackageServiceProvider
 {
 
     public function boot(): void

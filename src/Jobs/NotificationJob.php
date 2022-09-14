@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 
-namespace Modularlightspeed\Modularlightspeed\Jobs;
+namespace ModularLightspeed\ModularLightspeed\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;

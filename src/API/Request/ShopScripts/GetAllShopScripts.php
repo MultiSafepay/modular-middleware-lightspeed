@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
 
-namespace Modularlightspeed\Modularlightspeed\API\Request\ShopScripts;
+namespace ModularLightspeed\ModularLightspeed\API\Request\ShopScripts;
 
-use Modularlightspeed\Modularlightspeed\API\lightspeedRequestData;
+use ModularLightspeed\ModularLightspeed\API\lightspeedRequestData;
 
 final class GetAllShopScripts extends lightspeedRequestData
 {

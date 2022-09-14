@@ -1,16 +1,16 @@
 <?php
 
-namespace Modularlightspeed\Modularlightspeed\Facades;
+namespace ModularLightspeed\ModularLightspeed\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Modularlightspeed\Modularlightspeed\Modularlightspeed
+ * @see \ModularLightspeed\ModularLightspeed\ModularLightspeed
  */
-class Modularlightspeed extends Facade
+class ModularLightspeed extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return \Modularlightspeed\Modularlightspeed\Modularlightspeed::class;
+        return \ModularLightspeed\ModularLightspeed\ModularLightspeed::class;
     }
 }

@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
 
-namespace Modularlightspeed\Modularlightspeed\API\Request\ExternalServices;
+namespace ModularLightspeed\ModularLightspeed\API\Request\ExternalServices;
 
 
-use Modularlightspeed\Modularlightspeed\API\lightspeedRequestData;
+use ModularLightspeed\ModularLightspeed\API\lightspeedRequestData;
 
 final class GetAllExternalServices extends lightspeedRequestData
 {

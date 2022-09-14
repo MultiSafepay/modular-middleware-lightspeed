@@ -1,13 +1,13 @@
 <?php
-namespace Modularlightspeed\Modularlightspeed\Controllers;
+namespace ModularLightspeed\ModularLightspeed\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Log;
-use Modularlightspeed\Modularlightspeed\API\Response\PaymentMethodsResponse;
-use Modularlightspeed\Modularlightspeed\Models\lightspeed;
-use Modularlightspeed\Modularlightspeed\Requests\PaymentMethodRequest;
+use ModularLightspeed\ModularLightspeed\API\Response\PaymentMethodsResponse;
+use ModularLightspeed\ModularLightspeed\Models\lightspeed;
+use ModularLightspeed\ModularLightspeed\Requests\PaymentMethodRequest;
 use ModularMultiSafepay\ModularMultiSafepay\MultiSafepay;
 
 class PaymentMethodController extends Controller

@@ -1,9 +1,9 @@
 <?php
 
-namespace Modularlightspeed\Modularlightspeed\API\RequestRequest;
+namespace ModularLightspeed\ModularLightspeed\API\RequestRequest;
 
 use Illuminate\Http\Client\Response;
-use Modularlightspeed\Modularlightspeed\API\lightspeedRequestData;
+use ModularLightspeed\ModularLightspeed\API\lightspeedRequestData;
 use ModularMultiSafepay\ModularMultiSafepay\Response\OrderResponse;
 use function collect;
 

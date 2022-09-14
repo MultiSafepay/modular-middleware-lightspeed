@@ -1,10 +1,10 @@
 <?php
 
-namespace Modularlightspeed\Modularlightspeed\Commands;
+namespace ModularLightspeed\ModularLightspeed\Commands;
 
 use Illuminate\Console\Command;
 
-class ModularlightspeedCommand extends Command
+class ModularLightspeedCommand extends Command
 {
     public $signature = 'modular-middleware-lightspeed';
 

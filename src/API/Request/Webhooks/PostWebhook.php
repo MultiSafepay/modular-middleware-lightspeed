@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace Modularlightspeed\Modularlightspeed\API\Request\Webhooks;
+namespace ModularLightspeed\ModularLightspeed\API\Request\Webhooks;
 
 
-use Modularlightspeed\Modularlightspeed\API\lightspeedRequestData;
+use ModularLightspeed\ModularLightspeed\API\lightspeedRequestData;
 
 final class PostWebhook extends lightspeedRequestData
 {

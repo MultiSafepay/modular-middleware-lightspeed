@@ -1,12 +1,12 @@
 <?php
 
 use Illuminate\Routing\Middleware\SubstituteBindings;
-use Modularlightspeed\Modularlightspeed\Controllers\InvoiceController;
-use Modularlightspeed\Modularlightspeed\Controllers\NotificationController;
-use Modularlightspeed\Modularlightspeed\Controllers\PaymentMethodController;
-use Modularlightspeed\Modularlightspeed\Middleware\lightspeedMiddleware;
-use Modularlightspeed\Modularlightspeed\Controllers\PaymentController;
-use Modularlightspeed\Modularlightspeed\Controllers\InstallController;
+use ModularLightspeed\ModularLightspeed\Controllers\InvoiceController;
+use ModularLightspeed\ModularLightspeed\Controllers\NotificationController;
+use ModularLightspeed\ModularLightspeed\Controllers\PaymentMethodController;
+use ModularLightspeed\ModularLightspeed\Middleware\lightspeedMiddleware;
+use ModularLightspeed\ModularLightspeed\Controllers\PaymentController;
+use ModularLightspeed\ModularLightspeed\Controllers\InstallController;
 use Illuminate\Support\Facades\Route;
 
 Route::group([

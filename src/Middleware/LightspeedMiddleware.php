@@ -1,5 +1,5 @@
 <?php
-namespace Modularlightspeed\Modularlightspeed\Middleware;
+namespace ModularLightspeed\ModularLightspeed\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;

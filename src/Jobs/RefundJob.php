@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 
-namespace Modularlightspeed\Modularlightspeed\Jobs;
+namespace ModularLightspeed\ModularLightspeed\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
@@ -11,9 +11,9 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\Middleware\RateLimited;
 use Illuminate\Queue\Middleware\WithoutOverlapping;
 use Illuminate\Queue\SerializesModels;
-use Modularlightspeed\Modularlightspeed\API\Request\PutInvoiceData;
-use Modularlightspeed\Modularlightspeed\Clients\lightspeedClient;
-use Modularlightspeed\Modularlightspeed\Models\lightspeed;
+use ModularLightspeed\ModularLightspeed\API\Request\PutInvoiceData;
+use ModularLightspeed\ModularLightspeed\Clients\lightspeedClient;
+use ModularLightspeed\ModularLightspeed\Models\lightspeed;
 use ModularMultiSafepay\ModularMultiSafepay\MultiSafepay;
 use ModularMultiSafepay\ModularMultiSafepay\Order\Item;
 use ModularMultiSafepay\ModularMultiSafepay\Refund\CartRefund;

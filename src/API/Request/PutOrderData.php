@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace Modularlightspeed\Modularlightspeed\API\Request;
+namespace ModularLightspeed\ModularLightspeed\API\Request;
 
 use JetBrains\PhpStorm\ArrayShape;
-use Modularlightspeed\Modularlightspeed\API\lightspeedRequestData;
+use ModularLightspeed\ModularLightspeed\API\lightspeedRequestData;
 
 final class PutOrderData extends lightspeedRequestData
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Modularlightspeed\Modularlightspeed\API\Request;
+namespace ModularLightspeed\ModularLightspeed\API\Request;
 
 use Illuminate\Http\Client\Response;
-use Modularlightspeed\Modularlightspeed\API\lightspeedRequestData;
+use ModularLightspeed\ModularLightspeed\API\lightspeedRequestData;
 use function collect;
 
 class PutInvoiceData extends lightspeedRequestData

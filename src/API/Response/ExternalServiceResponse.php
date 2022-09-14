@@ -1,6 +1,6 @@
 <?php
 
-namespace Modularlightspeed\Modularlightspeed\API\Response;
+namespace ModularLightspeed\ModularLightspeed\API\Response;
 
 class ExternalServiceResponse
 {

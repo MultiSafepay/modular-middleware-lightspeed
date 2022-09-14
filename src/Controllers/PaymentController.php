@@ -1,12 +1,12 @@
 <?php
-namespace Modularlightspeed\Modularlightspeed\Controllers;
+namespace ModularLightspeed\ModularLightspeed\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
-use Modularlightspeed\Modularlightspeed\API\RequestRequest\GetOrderData;
-use Modularlightspeed\Modularlightspeed\Clients\lightspeedClient;
-use Modularlightspeed\Modularlightspeed\Models\lightspeed;
-use Modularlightspeed\Modularlightspeed\Requests\PaymentRequest;
+use ModularLightspeed\ModularLightspeed\API\RequestRequest\GetOrderData;
+use ModularLightspeed\ModularLightspeed\Clients\lightspeedClient;
+use ModularLightspeed\ModularLightspeed\Models\lightspeed;
+use ModularLightspeed\ModularLightspeed\Requests\PaymentRequest;
 use ModularMultiSafepay\ModularMultiSafepay\MultiSafepay;
 use ModularMultiSafepay\ModularMultiSafepay\Order\CustomerInfo;
 use ModularMultiSafepay\ModularMultiSafepay\Order\DeliveryInfo;

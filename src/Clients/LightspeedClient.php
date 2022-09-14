@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace Modularlightspeed\Modularlightspeed\Clients;
+namespace ModularLightspeed\ModularLightspeed\Clients;
 
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
-use Modularlightspeed\Modularlightspeed\API\lightspeedRequestData;
+use ModularLightspeed\ModularLightspeed\API\lightspeedRequestData;
 use function config;
 
 final class lightspeedClient

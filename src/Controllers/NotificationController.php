@@ -1,13 +1,13 @@
 <?php declare(strict_types=1);
 
-namespace Modularlightspeed\Modularlightspeed\Controllers;
+namespace ModularLightspeed\ModularLightspeed\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use Modularlightspeed\Modularlightspeed\Clients\lightspeedClient;
-use Modularlightspeed\Modularlightspeed\Models\lightspeed;
-use Modularlightspeed\Modularlightspeed\Jobs\NotificationJob;
+use ModularLightspeed\ModularLightspeed\Clients\lightspeedClient;
+use ModularLightspeed\ModularLightspeed\Models\lightspeed;
+use ModularLightspeed\ModularLightspeed\Jobs\NotificationJob;
 
 class NotificationController extends Controller
 {
