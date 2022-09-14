@@ -1,12 +1,12 @@
 {
-    "name": "modular-middleware/modular-middleware-template",
+    "name": "modular-middleware/modular-middleware-lightspeed",
     "description": "A package for modular middleware",
     "keywords": [
-        "modular-template",
+        "modular-lightspeed",
         "laravel",
-        "modular-middleware-template"
+        "modular-middleware-lightspeed"
     ],
-    "homepage": "https://github.com/modular-template/modular-middleware-template",
+    "homepage": "https://github.com/modular-lightspeed/modular-middleware-lightspeed",
     "license": "MIT",
     "authors": [
         {
@@ -51,10 +51,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ModularTemplate\\ModularTemplate\\ModularTemplateServiceProvider"
+                "ModularTemplate\\ModularTemplate\\ModularlightspeedServiceProvider"
             ],
             "aliases": {
-                "ModularTemplate": "ModularTemplate\\ModularTemplate\\Facades\\ModularTemplate"
+                "ModularTemplate": "Modularlightspeed\\Modularv\\Facades\\Modularlightspeed"
             }
         }
     },

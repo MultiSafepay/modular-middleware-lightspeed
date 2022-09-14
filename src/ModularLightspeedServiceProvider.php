@@ -1,24 +1,22 @@
 <?php
 
-namespace ModularTemplate\ModularTemplate;
+namespace Modularlightspeed\Modularlightspeed;
 
 use Illuminate\Support\Facades\Config;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use ModularTemplate\ModularTemplate\Commands\ModularTemplateCommand;
-use function Sodium\add;
 
-class ModularTemplateServiceProvider extends PackageServiceProvider
+class ModularlightspeedServiceProvider extends PackageServiceProvider
 {
 
     public function boot(): void
     {
         //Load Custom routes into laravel
-        $this->loadRoutesFrom(__DIR__ . '/routes/template.php');
+        $this->loadRoutesFrom(__DIR__ . '/routes/lightspeed.php');
 
         //Enable custom Horizon supervisor
         Config::set(
-            'horizon.defaults.supervisor-template',
+            'horizon.defaults.supervisor-lightspeed',
             [
                 'connection' => 'redis',
                 'queue' => ['default','template-high','template-low'],
@@ -40,13 +38,12 @@ class ModularTemplateServiceProvider extends PackageServiceProvider
         //Publish the required files
         $this->publishes([
             //Config
-            __DIR__.'/../config/template.php' => config_path('template.php'),
+            __DIR__.'/../config/lightspeed.php' => config_path('lightspeed.php'),
             //Migrations
-            __DIR__.'/../database/migrations/create_modular_middleware_template_table.php.stub' => database_path('migrations/2022_01_31_101358_create_modular_middleware_template_table.php'),
-            //Blades
-            __DIR__.'/../resources/views/preference.blade.php' => resource_path('views/template/preference.blade.php'),
+            __DIR__.'/../database/migrations/create_lightspeed_table.php.stub' => database_path('migrations/2021_10_15_105837_create_lightspeed_table.php'),
+            __DIR__.'/../database/migrations/create_lightspeed_refund_table.php.stub' => database_path('migrations/2021_12_06_120237_create_lightspeed_refund_table.php'),
         ], 'modular-middleware');
 
-        $package->name('modular-middleware-template');
+        $package->name('modular-middleware-lightspeed');
     }
 }
