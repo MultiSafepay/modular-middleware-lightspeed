@@ -3,9 +3,9 @@
 
 namespace ModularLightspeed\ModularLightspeed\API\Request\ShopScripts;
 
-use ModularLightspeed\ModularLightspeed\API\lightspeedRequestData;
+use ModularLightspeed\ModularLightspeed\API\LightspeedRequestData;
 
-final class GetAllShopScripts extends lightspeedRequestData
+final class GetAllShopScripts extends LightspeedRequestData
 {
     protected string $type = 'get';
     protected string $path = 'shop/scripts';

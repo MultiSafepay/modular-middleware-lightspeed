@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('lightspeed', function (Blueprint $table) {
+        Schema::create('Lightspeed', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->uuid('uuid')->unique();
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lightspeed');
+        Schema::dropIfExists('Lightspeed');
     }
 };

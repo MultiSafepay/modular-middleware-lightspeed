@@ -3,10 +3,10 @@
 namespace ModularLightspeed\ModularLightspeed\API\Request;
 
 use Illuminate\Http\Client\Response;
-use ModularLightspeed\ModularLightspeed\API\lightspeedRequestData;
+use ModularLightspeed\ModularLightspeed\API\LightspeedRequestData;
 use function collect;
 
-class PutInvoiceData extends lightspeedRequestData
+class PutInvoiceData extends LightspeedRequestData
 {
     protected string $type = 'put';
     protected string $path = 'invoices/';

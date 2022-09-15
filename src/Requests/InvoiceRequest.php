@@ -25,7 +25,7 @@ class InvoiceRequest extends FormRequest
     public function rules()
     {
         return [
-            'invoice.id' => 'required|unique:lightspeed_refunds,invoice_id',
+            'invoice.id' => 'required|unique:Lightspeed_refunds,invoice_id',
             'invoice.order.resource.id' => 'required',
             'invoice.priceIncl' => 'required|lt:0',
             'invoice.isCreditNote' => 'required|boolean|accepted',

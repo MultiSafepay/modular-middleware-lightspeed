@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Ramsey\Uuid\Uuid;
 
-class lightspeed extends Model
+class Lightspeed extends Model
 {
     use HasFactory;
 
-    protected $table = 'lightspeed';
+    protected $table = 'Lightspeed';
     protected $primaryKey = 'uuid';
     protected $keyType = 'string';
     public $incrementing = false;
@@ -43,6 +43,6 @@ class lightspeed extends Model
 
     public function refunds()
     {
-        return $this->hasMany(lightspeedRefund::class, 'lightspeed_uuid', 'uuid');
+        return $this->hasMany(LightspeedRefund::class, 'Lightspeed_uuid', 'uuid');
     }
 }

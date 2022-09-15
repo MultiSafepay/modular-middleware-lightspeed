@@ -12,8 +12,8 @@ use Illuminate\Queue\Middleware\RateLimited;
 use Illuminate\Queue\Middleware\WithoutOverlapping;
 use Illuminate\Queue\SerializesModels;
 use ModularLightspeed\ModularLightspeed\API\Request\PutInvoiceData;
-use ModularLightspeed\ModularLightspeed\Clients\lightspeedClient;
-use ModularLightspeed\ModularLightspeed\Models\lightspeed;
+use ModularLightspeed\ModularLightspeed\Clients\LightspeedClient;
+use ModularLightspeed\ModularLightspeed\Models\Lightspeed;
 use ModularMultiSafepay\ModularMultiSafepay\MultiSafepay;
 use ModularMultiSafepay\ModularMultiSafepay\Order\Item;
 use ModularMultiSafepay\ModularMultiSafepay\Refund\CartRefund;
@@ -23,9 +23,9 @@ class RefundJob implements ShouldQueue, ShouldBeUnique
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    public lightspeed $lightspeed; // used in app service provider.
+    public Lightspeed $Lightspeed; // used in app service provider.
     protected $invoice;
-    protected lightspeedClient $client;
+    protected LightspeedClient $client;
     protected MultiSafepay $multiSafepay;
 
     /**
@@ -56,12 +56,12 @@ class RefundJob implements ShouldQueue, ShouldBeUnique
      */
     public function __construct(
         $invoice,
-        lightspeed $lightspeed,
-        lightspeedClient $client,
+        Lightspeed $Lightspeed,
+        LightspeedClient $client,
         MultiSafepay $multiSafepay
     )
     {
-        $this->lightspeed = $lightspeed;
+        $this->Lightspeed = $Lightspeed;
         $this->invoice = $invoice;
         $this->client = $client;
         $this->multiSafepay = $multiSafepay;
@@ -74,11 +74,11 @@ class RefundJob implements ShouldQueue, ShouldBeUnique
      */
     public function handle(): void
     {
-        if ($this->lightspeed->refunds()->find($this->invoice['id'])) {
+        if ($this->Lightspeed->refunds()->find($this->invoice['id'])) {
             return;
         }
 
-        $transaction = $this->multiSafepay->getTransaction($this->lightspeed->api_key, $this->invoice['order']['resource']['id']);
+        $transaction = $this->multiSafepay->getTransaction($this->Lightspeed->api_key, $this->invoice['order']['resource']['id']);
 
         if (!$transaction) {
             return;
@@ -118,16 +118,16 @@ class RefundJob implements ShouldQueue, ShouldBeUnique
             );
         }
 
-        $refundStatus = $this->multiSafepay->createRefund($this->lightspeed->api_key, $refund);
+        $refundStatus = $this->multiSafepay->createRefund($this->Lightspeed->api_key, $refund);
 
         if ($refundStatus) {
-            $this->lightspeed->refunds()->create([
+            $this->Lightspeed->refunds()->create([
                 'invoice_id' => $this->invoice['id'],
                 'order_id' => $this->invoice['order']['resource']['id'],
             ]);
 
             $this->client->makeRequest(new PutInvoiceData(
-                $this->lightspeed->token,
+                $this->Lightspeed->token,
                 $this->invoice['id'],
             ));
         }
@@ -143,7 +143,7 @@ class RefundJob implements ShouldQueue, ShouldBeUnique
     {
         return [
             new RateLimited('refunds'),
-            (new WithoutOverlapping($this->lightspeed->token))->releaseAfter(330)
+            (new WithoutOverlapping($this->Lightspeed->token))->releaseAfter(330)
         ];
     }
 

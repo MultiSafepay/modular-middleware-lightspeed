@@ -3,9 +3,9 @@
 
 namespace ModularLightspeed\ModularLightspeed\API\Request\ExternalServices;
 
-use ModularLightspeed\ModularLightspeed\API\lightspeedRequestData;
+use ModularLightspeed\ModularLightspeed\API\LightspeedRequestData;
 
-final class DeleteExternalService extends lightspeedRequestData
+final class DeleteExternalService extends LightspeedRequestData
 {
     protected string $type = 'delete';
     protected string $path = 'external_services';

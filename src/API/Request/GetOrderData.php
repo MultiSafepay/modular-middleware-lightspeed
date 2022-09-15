@@ -3,11 +3,11 @@
 namespace ModularLightspeed\ModularLightspeed\API\RequestRequest;
 
 use Illuminate\Http\Client\Response;
-use ModularLightspeed\ModularLightspeed\API\lightspeedRequestData;
+use ModularLightspeed\ModularLightspeed\API\LightspeedRequestData;
 use ModularMultiSafepay\ModularMultiSafepay\Response\OrderResponse;
 use function collect;
 
-class GetOrderData extends lightspeedRequestData
+class GetOrderData extends LightspeedRequestData
 {
     protected string $type = 'get';
     protected string $path = 'orders/';

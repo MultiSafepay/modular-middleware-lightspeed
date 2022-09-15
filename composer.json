@@ -1,12 +1,12 @@
 {
-    "name": "modular-middleware/modular-middleware-lightspeed",
+    "name": "modular-middleware/modular-middleware-Lightspeed",
     "description": "A package for modular middleware",
     "keywords": [
-        "modular-lightspeed",
+        "modular-Lightspeed",
         "laravel",
-        "modular-middleware-lightspeed"
+        "modular-middleware-Lightspeed"
     ],
-    "homepage": "https://github.com/modular-lightspeed/modular-middleware-lightspeed",
+    "homepage": "https://github.com/modular-Lightspeed/modular-middleware-Lightspeed",
     "license": "MIT",
     "authors": [
         {

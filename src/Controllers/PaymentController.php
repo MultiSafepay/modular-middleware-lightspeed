@@ -4,8 +4,8 @@ namespace ModularLightspeed\ModularLightspeed\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
 use ModularLightspeed\ModularLightspeed\API\RequestRequest\GetOrderData;
-use ModularLightspeed\ModularLightspeed\Clients\lightspeedClient;
-use ModularLightspeed\ModularLightspeed\Models\lightspeed;
+use ModularLightspeed\ModularLightspeed\Clients\LightspeedClient;
+use ModularLightspeed\ModularLightspeed\Models\Lightspeed;
 use ModularLightspeed\ModularLightspeed\Requests\PaymentRequest;
 use ModularMultiSafepay\ModularMultiSafepay\MultiSafepay;
 use ModularMultiSafepay\ModularMultiSafepay\Order\CustomerInfo;
@@ -17,15 +17,15 @@ use ModularMultiSafepay\ModularMultiSafepay\Order\ShoppingCart;
 
 class PaymentController extends Controller
 {
-    public function store(PaymentRequest $request, MultiSafepay $multiSafepay, lightspeedClient $lightspeedClient, lightspeed $lightspeed): JsonResponse
+    public function store(PaymentRequest $request, MultiSafepay $multiSafepay, LightspeedClient $LightspeedClient, Lightspeed $Lightspeed): JsonResponse
     {
         $orderData = new GetOrderData(
             $request->order['id'],
-            $lightspeed->token,
-            $lightspeed->language
+            $Lightspeed->token,
+            $Lightspeed->language
         );
 
-        $orderRequest = $lightspeedClient->makeRequest($orderData);
+        $orderRequest = $LightspeedClient->makeRequest($orderData);
 
         $customerFullName = explode(' ', $orderRequest['addressShippingName']);
         $customerFirstname = array_shift($customerFullName);
@@ -98,14 +98,14 @@ class PaymentController extends Controller
             $orderRequest['paymentMethod'],
             ($payload ?? null) === null ? 'redirect' : 'direct',
             'MW' . $orderRequest['id'],
-            new PaymentOptions($request->redirect_url, $request->redirect_url, route('lightspeed.notification', $lightspeed->uuid), true, true),
+            new PaymentOptions($request->redirect_url, $request->redirect_url, route('Lightspeed.notification', $Lightspeed->uuid), true, true),
             $customer,
             $delivery,
             $payload,
             $shoppingCart
         );
 
-        $url = $multiSafepay->createTransaction($lightspeed->api_key, $order);
+        $url = $multiSafepay->createTransaction($Lightspeed->api_key, $order);
 
         return response()->json(['payment_url' => $url], 201);
     }

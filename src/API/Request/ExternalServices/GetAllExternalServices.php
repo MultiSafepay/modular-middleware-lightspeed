@@ -4,9 +4,9 @@
 namespace ModularLightspeed\ModularLightspeed\API\Request\ExternalServices;
 
 
-use ModularLightspeed\ModularLightspeed\API\lightspeedRequestData;
+use ModularLightspeed\ModularLightspeed\API\LightspeedRequestData;
 
-final class GetAllExternalServices extends lightspeedRequestData
+final class GetAllExternalServices extends LightspeedRequestData
 {
     protected string $type = 'get';
     protected string $path = 'external_services';

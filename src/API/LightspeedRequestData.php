@@ -8,7 +8,7 @@ use App\Data\RequestData;
 use App\Data\ResponseInterface;
 use Illuminate\Http\Client\Response;
 
-class lightspeedRequestData extends RequestData implements ResponseInterface
+class LightspeedRequestData extends RequestData implements ResponseInterface
 {
     public function __construct(
         protected string $token,

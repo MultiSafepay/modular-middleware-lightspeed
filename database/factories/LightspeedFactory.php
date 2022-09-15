@@ -1,12 +1,12 @@
 <?php
 
 
-use App\Models\lightspeed;
+use App\Models\Lightspeed;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class lightspeedFactory extends Factory
+class LightspeedFactory extends Factory
 {
-    protected $model = lightspeed::class;
+    protected $model = Lightspeed::class;
     /**
      * Define the model's default state.
      *

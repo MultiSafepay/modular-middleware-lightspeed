@@ -4,10 +4,10 @@
 namespace ModularLightspeed\ModularLightspeed\API\Request\ShopScripts;
 
 
-use ModularLightspeed\ModularLightspeed\API\lightspeedRequestData;
+use ModularLightspeed\ModularLightspeed\API\LightspeedRequestData;
 use function config;
 
-final class PostShopScript extends lightspeedRequestData
+final class PostShopScript extends LightspeedRequestData
 {
     protected string $type = 'post';
     protected string $path = 'shop/scripts';

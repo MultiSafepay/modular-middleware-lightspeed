@@ -14,8 +14,8 @@ class NotificationJob implements ShouldQueue
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     private $order;
-    protected $lightspeed;
-    protected $lightspeedClient;
+    protected $Lightspeed;
+    protected $LightspeedClient;
 
     /**
      * The number of times the job may be attempted.
@@ -36,11 +36,11 @@ class NotificationJob implements ShouldQueue
      *
      * @return void
      */
-    public function __construct($order, $lightspeed, $lightspeedClient)
+    public function __construct($order, $Lightspeed, $LightspeedClient)
     {
         $this->order = $order;
-        $this->lightspeed = $lightspeed;
-        $this->lightspeedClient = $lightspeedClient;
+        $this->Lightspeed = $Lightspeed;
+        $this->LightspeedClient = $LightspeedClient;
     }
 
     /**
@@ -71,13 +71,13 @@ class NotificationJob implements ShouldQueue
                 break;
         }
 
-        $lightspeedOrder = new PutOrderData(
-            $this->lightspeed['token'],
+        $LightspeedOrder = new PutOrderData(
+            $this->Lightspeed['token'],
             $this->order['order_id'],
             $status,
             $financial,
-            $this->lightspeed['language']
+            $this->Lightspeed['language']
         );
-        $this->lightspeedClient->makeRequest($lightspeedOrder);
+        $this->LightspeedClient->makeRequest($LightspeedOrder);
     }
 }

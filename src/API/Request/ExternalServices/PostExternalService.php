@@ -3,10 +3,10 @@
 namespace ModularLightspeed\ModularLightspeed\API\Request\ExternalServices;
 
 use JetBrains\PhpStorm\ArrayShape;
-use ModularLightspeed\ModularLightspeed\API\lightspeedRequestData;
+use ModularLightspeed\ModularLightspeed\API\LightspeedRequestData;
 use function config;
 
-final class PostExternalService extends lightspeedRequestData
+final class PostExternalService extends LightspeedRequestData
 {
     protected string $type = 'post';
     protected string $path = 'external_services';

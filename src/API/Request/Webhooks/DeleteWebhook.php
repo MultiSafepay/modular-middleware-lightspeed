@@ -3,9 +3,9 @@
 namespace ModularLightspeed\ModularLightspeed\API\Request\Webhooks;
 
 
-use ModularLightspeed\ModularLightspeed\API\lightspeedRequestData;
+use ModularLightspeed\ModularLightspeed\API\LightspeedRequestData;
 
-final class DeleteWebhook extends lightspeedRequestData
+final class DeleteWebhook extends LightspeedRequestData
 {
     protected string $type = 'delete';
     protected string $path = 'webhooks';

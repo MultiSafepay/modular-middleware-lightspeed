@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatelightspeedRefundTable extends Migration
+class CreateLightspeedRefundTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreatelightspeedRefundTable extends Migration
      */
     public function up()
     {
-        Schema::create('lightspeed_refunds', function (Blueprint $table) {
+        Schema::create('Lightspeed_refunds', function (Blueprint $table) {
             $table->string('invoice_id')->primary();
             $table->string('order_id');
-            $table->string('lightspeed_uuid');
+            $table->string('Lightspeed_uuid');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreatelightspeedRefundTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lightspeed_refund');
+        Schema::dropIfExists('Lightspeed_refund');
     }
 }

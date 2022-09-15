@@ -3,9 +3,9 @@
 namespace ModularLightspeed\ModularLightspeed\API\Request\Webhooks;
 
 
-use ModularLightspeed\ModularLightspeed\API\lightspeedRequestData;
+use ModularLightspeed\ModularLightspeed\API\LightspeedRequestData;
 
-final class GetAllWebhooks extends lightspeedRequestData
+final class GetAllWebhooks extends LightspeedRequestData
 {
     protected string $type = 'get';
     protected string $path = 'webhooks';

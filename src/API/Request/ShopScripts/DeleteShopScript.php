@@ -4,9 +4,9 @@
 namespace ModularLightspeed\ModularLightspeed\API\Request\ShopScripts;
 
 
-use ModularLightspeed\ModularLightspeed\API\lightspeedRequestData;
+use ModularLightspeed\ModularLightspeed\API\LightspeedRequestData;
 
-final class DeleteShopScript extends lightspeedRequestData
+final class DeleteShopScript extends LightspeedRequestData
 {
     protected string $type = 'delete';
     protected string $path = 'shop/scripts';

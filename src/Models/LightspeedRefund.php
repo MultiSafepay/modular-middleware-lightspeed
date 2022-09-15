@@ -5,22 +5,22 @@ namespace ModularLightspeed\ModularLightspeed\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class lightspeedRefund extends Model
+class LightspeedRefund extends Model
 {
     use HasFactory;
 
-    protected $table = 'lightspeed_refunds';
+    protected $table = 'Lightspeed_refunds';
 
     protected $primaryKey = 'invoice_id';
 
     protected $fillable = [
         'invoice_id',
         'order_id',
-        'lightspeed_uuid',
+        'Lightspeed_uuid',
     ];
 
-    public function lightspeed()
+    public function Lightspeed()
     {
-        return $this->belongsTo(lightspeed::class, 'lightspeed_uuid', 'uuid');
+        return $this->belongsTo(Lightspeed::class, 'Lightspeed_uuid', 'uuid');
     }
 }

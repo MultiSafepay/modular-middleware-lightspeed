@@ -4,7 +4,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use ModularLightspeed\ModularLightspeed\Controllers\InvoiceController;
 use ModularLightspeed\ModularLightspeed\Controllers\NotificationController;
 use ModularLightspeed\ModularLightspeed\Controllers\PaymentMethodController;
-use ModularLightspeed\ModularLightspeed\Middleware\lightspeedMiddleware;
+use ModularLightspeed\ModularLightspeed\Middleware\LightspeedMiddleware;
 use ModularLightspeed\ModularLightspeed\Controllers\PaymentController;
 use ModularLightspeed\ModularLightspeed\Controllers\InstallController;
 use Illuminate\Support\Facades\Route;
@@ -31,7 +31,7 @@ Route::group([
      */
     Route::group([
         'prefix' => '{lightspeed}',
-        'middleware' => lightspeedMiddleware::class
+        'middleware' => LightspeedMiddleware::class
     ], function () {
         Route::get('alive', function() {
             return response()->json(["success" => true]);

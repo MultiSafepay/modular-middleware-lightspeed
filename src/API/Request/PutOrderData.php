@@ -3,9 +3,9 @@
 namespace ModularLightspeed\ModularLightspeed\API\Request;
 
 use JetBrains\PhpStorm\ArrayShape;
-use ModularLightspeed\ModularLightspeed\API\lightspeedRequestData;
+use ModularLightspeed\ModularLightspeed\API\LightspeedRequestData;
 
-final class PutOrderData extends lightspeedRequestData
+final class PutOrderData extends LightspeedRequestData
 {
     protected string $type = 'put';
     protected string $path = 'orders';
