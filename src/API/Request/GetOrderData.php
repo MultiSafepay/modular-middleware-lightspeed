@@ -1,6 +1,6 @@
 <?php
 
-namespace ModularLightspeed\ModularLightspeed\API\RequestRequest;
+namespace ModularLightspeed\ModularLightspeed\API\Request;
 
 use Illuminate\Http\Client\Response;
 use ModularLightspeed\ModularLightspeed\API\LightspeedRequestData;

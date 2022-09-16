@@ -1,13 +1,13 @@
 <?php declare(strict_types=1);
 
-namespace ModularLightspeed\ModularLightspeed\Clients;
+namespace Modularlightspeed\Modularlightspeed\Clients;
 
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
-use ModularLightspeed\ModularLightspeed\API\LightspeedRequestData;
+use Modularlightspeed\Modularlightspeed\API\lightspeedRequestData;
 use function config;
 
-final class LightspeedClient
+final class lightspeedClient
 {
     protected string $url;
     protected array $options;
@@ -24,7 +24,7 @@ final class LightspeedClient
         return $this->apiUrl. '/' . $language . '/' . $path . '.json';
     }
 
-    public function makeRequest(LightspeedRequestData $requestData): array|string|null|\Illuminate\Support\Collection
+    public function makeRequest(lightspeedRequestData $requestData): array|string|null|\Illuminate\Support\Collection
     {
         $response = match ($requestData->getType()) {
             'get' => $this->makeGetRequest(
@@ -75,7 +75,7 @@ final class LightspeedClient
     public function makeGetRequest(array $headers, string $token, string $path, array $params): Response
     {
         return Http::withHeaders($headers)
-            ->withBasicAuth(config('Lightspeed.app_key'), md5($token . config('Lightspeed.app_secret')))
+            ->withBasicAuth(config('lightspeed.app_key'), md5($token . config('lightspeed.app_secret')))
             ->get(
                 $path,
                 $params
@@ -85,7 +85,7 @@ final class LightspeedClient
     public function makeDeleteRequest(array $headers, string $token, string $path, array $params): Response
     {
         return Http::withHeaders($headers)
-            ->withBasicAuth(config('Lightspeed.app_key'), md5($token . config('Lightspeed.app_secret')))
+            ->withBasicAuth(config('lightspeed.app_key'), md5($token . config('lightspeed.app_secret')))
             ->delete(
                 $path,
                 $params
@@ -95,7 +95,7 @@ final class LightspeedClient
     public function makePostRequest(array $headers, string $token, string $path, array $json): Response
     {
         return Http::withHeaders($headers)
-            ->withBasicAuth(config('Lightspeed.app_key'), md5($token . config('Lightspeed.app_secret')))
+            ->withBasicAuth(config('lightspeed.app_key'), md5($token . config('lightspeed.app_secret')))
             ->post(
                 $path,
                 $json
@@ -104,7 +104,7 @@ final class LightspeedClient
     public function makePutRequest(array $headers, string $token, string $path, array $json): Response
     {
         return Http::withHeaders($headers)
-            ->withBasicAuth(config('Lightspeed.app_key'), md5($token . config('Lightspeed.app_secret')))
+            ->withBasicAuth(config('lightspeed.app_key'), md5($token . config('lightspeed.app_secret')))
             ->put(
                 $path,
                 $json

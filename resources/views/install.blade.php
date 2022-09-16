@@ -18,7 +18,7 @@
     <div class="offset-md-3 col-md-6 col-sm-12">
         <div class="card">
             <div class="card-body">
-                <form method="POST" action="{{route('lightspeed.install.update', $uuid)}}">
+                <form method="POST" action="{{route('Lightspeed.install.update', $uuid)}}">
                     @method('PUT')
                     @csrf
                     <div class="form-group">
