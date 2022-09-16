@@ -20,7 +20,7 @@ class ModularLightspeedServiceProvider extends PackageServiceProvider
             'horizon.defaults.supervisor-Lightspeed',
             [
                 'connection' => 'redis',
-                'queue' => ['default','template-high','template-low'],
+                'queue' => ['default','LightspeedNotifications','Lightspeedrefunds'],
                 'balance' => 'auto',
                 'maxProcesses' => 2,
                 'maxTime' => 0,
@@ -37,7 +37,10 @@ class ModularLightspeedServiceProvider extends PackageServiceProvider
             //Config
             __DIR__ . '/../config/Lightspeed.php' => config_path('Lightspeed.php'),
             //Blades
+            __DIR__.'/../resources/views/base.blade.php' => resource_path('views/Lightspeed/base.blade.php'),
             __DIR__.'/../resources/views/install.blade.php' => resource_path('views/Lightspeed/install.blade.php'),
+            //JS
+            __DIR__.'/../resources/js/checkout/checkout.js' => resource_path('views/Lightspeed/js/checkout.js'),
             //Migrations
             __DIR__.'/../database/migrations/create_lightspeed_table.php.stub' => database_path('migrations/create_lightspeed_table.php'),
             __DIR__.'/../database/migrations/create_lightspeed_refund_table.php.stub' => database_path('migrations/create_lightspeed_refund_table.php'),
