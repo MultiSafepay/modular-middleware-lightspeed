@@ -2,8 +2,8 @@
 
 // config for ModularLightspeed/ModularLightspeed
 return [
-    'enabled' => env('Lightspeed_ENABLED', true),
-    'app_key' => env('Lightspeed_KEY'),
-    'app_secret' => env('Lightspeed_SECRET'),
-    'apiUrl' => env('Lightspeed_URL', 'https://api.webshopapp.com'),
+    'enabled' => env('LIGHTSPEED_ENABLED', true),
+    'app_key' => env('LIGHTSPEED_KEY'),
+    'app_secret' => env('LIGHTSPEED_SECRET'),
+    'apiUrl' => env('LIGHTSPEED_CLUSTER', 'https://api.webshopapp.com'),
 ];

@@ -105,7 +105,7 @@ class InstallController
      * @param Lightspeed $Lightspeed
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(InstallRequest $request, Lightspeed $Lightspeed): \Illuminate\Http\RedirectResponse
+    public function update(InstallRequest $request, Lightspeed $Lightspeed, LightspeedClient $client): \Illuminate\Http\RedirectResponse
     {
         $Lightspeed->api_key = $request->api_key;
         $Lightspeed->save();

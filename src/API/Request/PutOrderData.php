@@ -12,7 +12,7 @@ final class PutOrderData extends LightspeedRequestData
 
     public function __construct(
         string $token,
-        protected int $orderId,
+        protected $orderId,
         protected string $status,
         protected string $paymentStatus,
         string $language = 'en',

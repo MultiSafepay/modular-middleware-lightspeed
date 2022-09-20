@@ -1,5 +1,5 @@
 {
-    "name": "modular-middleware/modular-middleware-lightspeed",
+    "name": "modular-middleware/modular-middleware-Lightspeed",
     "description": "A package for modular middleware",
     "keywords": [
         "modular-Lightspeed",
@@ -54,7 +54,7 @@
                 "ModularLightspeed\\ModularLightspeed\\ModularLightspeedServiceProvider"
             ],
             "aliases": {
-                "ModularLightspeed": "ModularLightspeed\\Modularv\\Facades\\ModularLightspeed"
+                "ModularLightspeed": "ModularLightspeed\\ModularLightspeed\\Facades\\ModularLightspeed"
             }
         }
     },

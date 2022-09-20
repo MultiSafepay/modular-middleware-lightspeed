@@ -4,7 +4,7 @@ namespace ModularLightspeed\ModularLightspeed\API\Request;
 
 use Illuminate\Http\Client\Response;
 use ModularLightspeed\ModularLightspeed\API\LightspeedRequestData;
-use ModularMultiSafepay\ModularMultiSafepay\Response\OrderResponse;
+use ModularLightspeed\ModularLightspeed\API\Response\OrderResponse;
 use function collect;
 
 class GetOrderData extends LightspeedRequestData

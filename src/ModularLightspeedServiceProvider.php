@@ -34,13 +34,14 @@ class ModularLightspeedServiceProvider extends PackageServiceProvider
 
         //Publish the required files
         $this->publishes([
+
             //Config
             __DIR__ . '/../config/Lightspeed.php' => config_path('Lightspeed.php'),
             //Blades
             __DIR__.'/../resources/views/base.blade.php' => resource_path('views/Lightspeed/base.blade.php'),
             __DIR__.'/../resources/views/install.blade.php' => resource_path('views/Lightspeed/install.blade.php'),
             //JS
-            __DIR__.'/../resources/js/checkout/checkout.js' => resource_path('views/Lightspeed/js/checkout.js'),
+            __DIR__.'/../resources/js/checkoutv2/checkout.js' => public_path('js/Lightspeed/checkout.js'),
             //Migrations
             __DIR__.'/../database/migrations/create_lightspeed_table.php.stub' => database_path('migrations/create_lightspeed_table.php'),
             __DIR__.'/../database/migrations/create_lightspeed_refund_table.php.stub' => database_path('migrations/create_lightspeed_refund_table.php'),
@@ -61,7 +62,7 @@ class ModularLightspeedServiceProvider extends PackageServiceProvider
     public function register()
     {
         $this->app->singleton(LightspeedClient::class, function ($app) {
-            return new LightspeedClient(config('lightspeed.apiUrl'));
+            return new LightspeedClient(config('Lightspeed.apiUrl'));
         });
     }
 

@@ -4,6 +4,7 @@
 namespace ModularLightspeed\ModularLightspeed\API\Request\ShopScripts;
 
 
+use Illuminate\Support\Facades\Log;
 use ModularLightspeed\ModularLightspeed\API\LightspeedRequestData;
 use function config;
 

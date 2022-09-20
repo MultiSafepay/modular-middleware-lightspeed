@@ -3,10 +3,9 @@
 
 namespace ModularLightspeed\ModularLightspeed\API;
 
-
-use App\Data\RequestData;
-use App\Data\ResponseInterface;
 use Illuminate\Http\Client\Response;
+use ModularLightspeed\ModularLightspeed\API\Data\RequestData;
+use ModularLightspeed\ModularLightspeed\API\Data\ResponseInterface;
 
 class LightspeedRequestData extends RequestData implements ResponseInterface
 {

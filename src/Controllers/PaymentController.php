@@ -3,7 +3,8 @@ namespace ModularLightspeed\ModularLightspeed\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
-use ModularLightspeed\ModularLightspeed\API\RequestRequest\GetOrderData;
+use Illuminate\Support\Facades\Log;
+use ModularLightspeed\ModularLightspeed\API\Request\GetOrderData;
 use ModularLightspeed\ModularLightspeed\Clients\LightspeedClient;
 use ModularLightspeed\ModularLightspeed\Models\Lightspeed;
 use ModularLightspeed\ModularLightspeed\Requests\PaymentRequest;
@@ -26,6 +27,8 @@ class PaymentController extends Controller
         );
 
         $orderRequest = $LightspeedClient->makeRequest($orderData);
+
+        Log::info('PAYMENT INFO',[$orderRequest]);
 
         $customerFullName = explode(' ', $orderRequest['addressShippingName']);
         $customerFirstname = array_shift($customerFullName);
