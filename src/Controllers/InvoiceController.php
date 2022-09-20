@@ -22,6 +22,6 @@ class InvoiceController extends Controller
             $Lightspeed,
             $client,
             $multiSafepay
-        )->onQueue('refunds');
+        )->onQueue('LightspeedRefunds');
     }
 }

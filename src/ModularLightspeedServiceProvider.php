@@ -20,7 +20,7 @@ class ModularLightspeedServiceProvider extends PackageServiceProvider
             'horizon.defaults.supervisor-Lightspeed',
             [
                 'connection' => 'redis',
-                'queue' => ['default','LightspeedNotifications','Lightspeedrefunds'],
+                'queue' => ['LightspeedNotifications','LightspeedRefunds'],
                 'balance' => 'auto',
                 'maxProcesses' => 2,
                 'maxTime' => 0,
