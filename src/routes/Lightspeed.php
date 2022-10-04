@@ -10,7 +10,7 @@ use ModularLightspeed\ModularLightspeed\Controllers\InstallController;
 use Illuminate\Support\Facades\Route;
 
 Route::group([
-    'prefix' => 'Lightspeed',
+    'prefix' => 'lightspeed',
     'as' => 'Lightspeed.',
     'middleware' => SubstituteBindings::class
 ], function () {
