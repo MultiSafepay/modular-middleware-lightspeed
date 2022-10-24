@@ -7,16 +7,6 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('Lightspeed_refund');
-    }
-
-    /**
      * Run the migrations.
      *
      * @return void
@@ -29,5 +19,15 @@ return new class extends Migration
             $table->string('Lightspeed_uuid');
             $table->timestamps();
         });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('Lightspeed_refunds');
     }
 };
