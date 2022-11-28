@@ -11,6 +11,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\Middleware\RateLimited;
 use Illuminate\Queue\Middleware\WithoutOverlapping;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Log;
 use ModularLightspeed\ModularLightspeed\API\Request\PutInvoiceData;
 use ModularLightspeed\ModularLightspeed\Clients\LightspeedClient;
 use ModularLightspeed\ModularLightspeed\Models\Lightspeed;
@@ -165,5 +166,10 @@ class RefundJob implements ShouldQueue, ShouldBeUnique
     public function backoff()
     {
         return [300, 600, 900];
+    }
+
+    public function fail($exception = null)
+    {
+        Log::error("Refund job failed: " . $this->Lightspeed->api_key,[$exception]);
     }
 }

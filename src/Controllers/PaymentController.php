@@ -101,7 +101,7 @@ class PaymentController extends Controller
             $orderRequest['paymentMethod'],
             ($payload ?? null) === null ? 'redirect' : 'direct',
             'MW' . $orderRequest['id'],
-            new PaymentOptions($request->redirect_url, $request->redirect_url, route('Lightspeed.notification', $Lightspeed->uuid), true, true),
+            new PaymentOptions($request->redirect_url, $request->redirect_url, route('lightspeed.notification', $Lightspeed->uuid), true, true),
             $customer,
             $delivery,
             $payload,

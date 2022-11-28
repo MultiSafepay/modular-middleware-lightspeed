@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group([
     'prefix' => 'lightspeed',
-    'as' => 'Lightspeed.',
+    'as' => 'lightspeed.',
     'middleware' => SubstituteBindings::class
 ], function () {
     /**
@@ -20,17 +20,17 @@ Route::group([
     Route::get('success', [InstallController::class, 'store'])->name('install.success');
 
     Route::resource('install', InstallController::class)
-        ->parameter('install', 'Lightspeed')
+        ->parameter('install', 'lightspeed')
         ->middleware('web')
         ->only(['show', 'update']);
 
-    Route::post('{Lightspeed}/notification', NotificationController::class)->name('notification');
+    Route::post('{lightspeed}/notification', NotificationController::class)->name('notification');
 
     /**
      * Payment, Webhook routes
      */
     Route::group([
-        'prefix' => '{Lightspeed}',
+        'prefix' => '{lightspeed}',
         'middleware' => LightspeedMiddleware::class
     ], function () {
         Route::get('alive', function() {

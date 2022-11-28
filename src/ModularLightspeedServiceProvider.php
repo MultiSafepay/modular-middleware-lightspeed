@@ -36,12 +36,18 @@ class ModularLightspeedServiceProvider extends PackageServiceProvider
         $this->publishes([
 
             //Config
-            __DIR__ . '/../config/Lightspeed.php' => config_path('Lightspeed.php'),
+            __DIR__ . '/../config/Lightspeed.php' => config_path('lightspeed.php'),
+            //favicon
+            __DIR__.'/../resources/favicon.ico' => public_path('lightspeed/favicon.ico'),
+            __DIR__.'/../resources/favicon.svg' => public_path('lightspeed/favicon.svg'),
+            __DIR__.'/../resources/favicon-mask.svg' => public_path('lightspeed/favicon-mask.svg'),
+            //Images
+            __DIR__.'/../resources/images/msp-logo-white.svg' => public_path('images/lightspeed/msp-logo-white.svg'),
             //Blades
-            __DIR__.'/../resources/views/base.blade.php' => resource_path('views/Lightspeed/base.blade.php'),
-            __DIR__.'/../resources/views/install.blade.php' => resource_path('views/Lightspeed/install.blade.php'),
+            __DIR__.'/../resources/views/base.blade.php' => resource_path('views/lightspeed/base.blade.php'),
+            __DIR__.'/../resources/views/install.blade.php' => resource_path('views/lightspeed/install.blade.php'),
             //JS
-            __DIR__.'/../resources/js/checkoutv2/checkout.js' => public_path('js/Lightspeed/checkout.js'),
+            __DIR__.'/../resources/js/checkoutv2/checkout.js' => public_path('js/lightspeed/checkout.js'),
             //Migrations
             __DIR__.'/../database/migrations/create_lightspeed_table.php.stub' => database_path('migrations/create_lightspeed_table.php'),
             __DIR__.'/../database/migrations/create_lightspeed_refund_table.php.stub' => database_path('migrations/create_lightspeed_refund_table.php'),

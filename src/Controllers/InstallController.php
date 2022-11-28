@@ -17,7 +17,7 @@ class InstallController
      */
     public function show(Lightspeed $Lightspeed)
     {
-        return view('Lightspeed.install', ['uuid' => $Lightspeed->uuid]);
+        return view('lightspeed.install', ['uuid' => $Lightspeed->uuid]);
     }
 
     /**
@@ -45,7 +45,7 @@ class InstallController
         if ($credentials->wasRecentlyCreated) {
             $client->makeRequest(new PostExternalService(
                 $credentials->token,
-                url('/Lightspeed') . '/' . $credentials->uuid,
+                url('/lightspeed') . '/' . $credentials->uuid,
                 'payment',
                 $language
             ));
@@ -54,7 +54,7 @@ class InstallController
                 $credentials->token,
                 'shipments',
                 'created',
-                route('Lightspeed.webhook.shipments.created', $credentials->uuid),
+                route('lightspeed.webhook.shipments.created', $credentials->uuid),
                 $language
             ));
 
@@ -62,7 +62,7 @@ class InstallController
                 $credentials->token,
                 'shipments',
                 'updated',
-                route('Lightspeed.webhook.shipments.updated', $credentials->uuid),
+                route('lightspeed.webhook.shipments.updated', $credentials->uuid),
                 $language
             ));
 
@@ -70,7 +70,7 @@ class InstallController
                 $credentials->token,
                 'shipments',
                 'deleted',
-                route('Lightspeed.webhook.shipments.deleted', $credentials->uuid),
+                route('lightspeed.webhook.shipments.deleted', $credentials->uuid),
                 $language
             ));
 
@@ -78,7 +78,7 @@ class InstallController
                 $credentials->token,
                 'invoices',
                 'updated',
-                route('Lightspeed.webhook.invoice.created', $credentials->uuid),
+                route('lightspeed.webhook.invoice.created', $credentials->uuid),
                 $language
             ));
 
@@ -86,18 +86,18 @@ class InstallController
                 $credentials->token,
                 'invoices',
                 'created',
-                route('Lightspeed.webhook.invoice.updated', $credentials->uuid),
+                route('lightspeed.webhook.invoice.updated', $credentials->uuid),
                 $language
             ));
 
             $client->makeRequest(new PostShopScript(
                 $credentials->token,
-                secure_asset('js/Lightspeed/checkout.js'),
+                secure_asset('js/lightspeed/checkout.js'),
                 $language
             ));
         }
 
-        return Redirect()->route('Lightspeed.install.show', [$credentials->uuid]);
+        return Redirect()->route('lightspeed.install.show', [$credentials->uuid]);
     }
 
     /**

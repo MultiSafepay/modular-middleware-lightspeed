@@ -19,7 +19,7 @@
             </ul>
         </div>
     @endif
-    <div class="offset-md-3 col-md-6 col-sm-12 mt-3">
+    <div class="offset-md-4 col-md-4 col-sm-12 mt-3">
         <div class="card">
             <div class="card-body">
                 <div>
@@ -31,12 +31,11 @@
                         details.
                     </p>
                 </div>
-                <form method="POST" action="{{route('Lightspeed.install.update', $uuid)}}">
+                <form method="POST" action="{{route('lightspeed.install.update', $uuid)}}">
                     @method('PUT')
                     @csrf
 
                     <div class="form-group pt-2">
-                        <p class="block text-base font-medium text-gray-700 my-1 font-weight-bold">API Settings</p>
                         <label for="mspApiKey" class="font-weight-bold">MultiSafepay API key:</label>
                         <input type="text" class="form-control" id="mspApiKey" name="api_key" placeholder="Enter MSP API Key">
                     </div>

@@ -7,14 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MultiSafepay Payments</title>
     <script defer src="https://unpkg.com/alpinejs@3.2.2/dist/cdn.min.js"></script>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <meta name="theme-color" content="#004A71">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="alternate icon" href="favicon.ico">
-    <link rel="mask-icon" href="favicon-mask.svg" color="red">
+    <link rel="icon" href="/lightspeed/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="/lightspeed/favicon.ico">
+    <link rel="mask-icon" href="/lightspeed/favicon-mask.svg" color="red">
 
     <style>
+
         .bg-multisafepay {
             --tw-bg-opacity: 1;
             background-color: rgba(0, 74, 113, var(--tw-bg-opacity)) !important;
@@ -27,8 +28,8 @@
 </head>
 <body class="bg-gray-50">
 <header class="bg-multisafepay p-1 flex justify-center align-center items-center shadow sticky top-0">
-    <div class="w-6/12 flex justify-center align-center items-center">
-        <img class="h-12 p-2" src="/images/msp-logo-white.svg"/>
+    <div class="col-sm-2 flex mx-auto">
+        <img class="img-fluid p-2" src="/images/lightspeed/msp-logo-white.svg"/>
     </div>
 </header>
 <main>
