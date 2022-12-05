@@ -28,8 +28,6 @@ class PaymentController extends Controller
 
         $orderRequest = $LightspeedClient->makeRequest($orderData);
 
-        Log::info('PAYMENT INFO',[$orderRequest]);
-
         $customerFullName = explode(' ', $orderRequest['addressShippingName']);
         $customerFirstname = array_shift($customerFullName);
         $customerLastname = implode(' ', $customerFullName);
