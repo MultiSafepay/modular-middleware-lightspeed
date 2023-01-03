@@ -47,7 +47,7 @@ class ModularLightspeedServiceProvider extends PackageServiceProvider
             __DIR__.'/../resources/views/base.blade.php' => resource_path('views/lightspeed/base.blade.php'),
             __DIR__.'/../resources/views/install.blade.php' => resource_path('views/lightspeed/install.blade.php'),
             //JS
-            __DIR__.'/../resources/js/checkoutv2/checkout.js' => public_path('js/lightspeed/checkout.js'),
+            __DIR__.'/../resources/js/checkout/checkout.js' => public_path('js/lightspeed/checkout.js'),
             //Migrations
             __DIR__.'/../database/migrations/create_lightspeed_table.php.stub' => database_path('migrations/create_lightspeed_table.php'),
             __DIR__.'/../database/migrations/create_lightspeed_refund_table.php.stub' => database_path('migrations/create_lightspeed_refund_table.php'),
